@@ -1,4 +1,4 @@
-*{
+*, ::before, ::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,4 +31,35 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*------------- main -------------*/
+.main{
+    background-color: var(--Very-Dark-Blue);
+    width: min(90rem, 100%);
+    min-height: 50rem;
+    background-image: url(../img/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------------- section -------------*/
+.main__scn-cd-cnt{
+    background-color: transparent;
+    width: min(57.5rem, 95%);
+}
+
+
+
+/*--------- responsive -----------*/
+@media(max-width: 375px){
+    /*------------- main -------------*/
+    .main{
+        background-image: url(../img/bg-mobile.png);
+        background-position: center;
+        background-size: cover;
+    }
 }
