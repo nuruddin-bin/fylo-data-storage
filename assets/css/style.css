@@ -50,7 +50,7 @@ body{
 /*------------- section -------------*/
 .main__scn-cd-cnt{
     background-color: transparent;
-    width: min(57.5rem, 95%);
+    width: min(57.5rem, 90%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,7 +59,7 @@ body{
 /* left side */
 .sen__left{
     background-color: var(--Dark-Blue);
-    width: 38%;
+    width: 36%;
     padding: 2.2rem 7rem 2.2rem 2.3rem;
     border-radius: .5rem;
     border-top-right-radius: 5rem;
@@ -100,10 +100,47 @@ body{
 /* right side */
 .sen__right{
     background-color: var(--Dark-Blue);
-    width: 58%;
+    width: 60%;
     align-self: flex-end;
-    padding: 2.5rem 2.4rem;
+    padding: 2.2rem 2.4rem;
     border-radius: .5rem;
+    position: relative;
+}
+
+.right__limit-box{
+    position: absolute;
+    background-color: #fff;
+    right: 2.4rem;
+    top: -2.3rem;
+    color: var(--Grayish-Blue);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: var(--fw-bold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11.25rem;
+    height: 4.5rem;
+    border-radius: .5rem;
+    border-bottom-right-radius: initial;
+}
+
+.right__limit-box::after{
+    position: absolute;
+    content: '';
+    bottom: -1.4rem;
+    right: 0;
+    background-color: #fff;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.limit__number{
+    font-size: 2.5rem;
+    color: var(--Very-Dark-Blue);
+    font-weight: var(--fw-bold);
+    margin-right: .5rem;
 }
 
 .right__title{
@@ -157,13 +194,48 @@ body{
     color: var(--Pale-Blue);
     font-size: 1rem;
     font-weight: var(--fw-bold);
+    text-transform: uppercase;
 }
 
 
 /*--------- responsive -----------*/
+@media(max-width: 800px){
+    /*--------- cards container ---------*/
+    .main__scn-cd-cnt{
+        flex-direction: column;
+    }
+
+    /* left side */
+    .sen__left{
+        width: min(25rem, 100%);
+        margin-bottom: .5rem;
+        align-self: flex-start;
+    }
+
+    /* right side */
+    .sen__right{
+        width: 100%;
+    }
+}
+
+
+@media(max-width: 600px){
+    /* right side */
+    .right__limit-box{
+        top: 8.5rem;
+        border-bottom-right-radius: .5rem;
+    }
+
+    .right__limit-box::after{
+        display: none;
+    }
+}
+
+
 @media(max-width: 375px){
     /*------------- main -------------*/
     .main{
+        min-height: 42rem;
         background-image: url(../img/bg-mobile.png);
         background-position: center;
         background-size: cover;
