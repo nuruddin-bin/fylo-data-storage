@@ -67,6 +67,9 @@ body{
 
 .left__logo-a{
     text-decoration: none;
+}
+
+.logo__img{
     display: block;
 }
 
@@ -80,7 +83,7 @@ body{
 
 .icon__img-cnt{
     background-color: var(--Very-Dark-Blue);
-    width: 3rem;
+    min-width: 3rem;
     aspect-ratio: 1;
     display: flex;
     justify-content: center;
@@ -142,18 +145,19 @@ body{
     background-color: var(--Pale-Blue);
 }
 
-.right__load{
-    font-size: 14px;
-    font-weight: var(--fw-bold);
-    color: var(--Pale-Blue);
-    text-transform: uppercase;
+.right__load-status{
+    width: 100%;
     margin-top: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.right__load-end{
-    
+.load__unit{
+    color: var(--Pale-Blue);
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
 }
-
 
 
 /*--------- responsive -----------*/
