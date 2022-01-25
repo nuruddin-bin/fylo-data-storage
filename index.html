@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./assets/img/icon-document.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/icon-folder.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Fylo Data Storage</title>
 </head>
@@ -18,17 +18,29 @@
                 <a href="#" class="left__logo-a">
                     <img src="./assets/img/logo.svg" alt="fylo" class="logo__img">
                 </a>
-                <img src="./assets/img/icon-document.svg" alt="docoment" class="left__icon">
-                <img src="./assets/img/icon-folder.svg" alt="folder" class="left__icon">
-                <img src="./assets/img/icon-upload.svg" alt="upload" class="left__icon">
+
+                <div class="left__icon-cnt">
+                    <div class="icon__img-cnt">
+                        <img src="./assets/img/icon-document.svg" alt="docoment" class="icon__img">
+                    </div>
+                    <div class="icon__img-cnt">
+                        <img src="./assets/img/icon-folder.svg" alt="flder" class="icon__img">
+                    </div>
+                    <div class="icon__img-cnt">
+                        <img src="./assets/img/icon-upload.svg" alt="upload" class="icon__img">
+                    </div>
+                </div>
+
             </div>
 
             <!-- right side -->
             <div class="sen__right">
-                <p class="right__status">You’ve used 815 GB of your storage</p>
-                <div class="right__load-box">
-                    <div class="load__bar"></div>
-                </div>
+                <p class="right__title">You’ve used 815 GB of your storage</p>
+
+                <div class="right__load-box"></div>
+
+                <span class="right__load right__load-start">0 gb</span>
+                <span class="right__load right__load-end">1000 gb</span>
             </div>
 
         </section>
